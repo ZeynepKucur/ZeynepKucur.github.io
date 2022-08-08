@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart If Else
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart If Else</h1>
+            <div class="section">
+                <h2>if deyimi</h2>
+                <p>If deyimi, yalnızca belirtilen koşul doğru olduğunda kod bloğunun çalıştırılmasına izin verir.</p>
+                <p>Dart dilinde en genel if deyimi aşağıdaki gibi yazılır:
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">if</span> (koşul)
+                            {<br><br>
+                            <span class="comment">&emsp; //koşul doğru ise çalıştırılacak kod</span><br><br>
+                            }
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span><span class="keyword">if</span> ( <span class="number">10</span> > <span
+                                class="number">5</span> )
+                            <br>{
+                            <br>&emsp; <span class="keyword">print</span>(<span class="string">'on, beşten
+                                büyüktür.'</span>);
+                            <br> }
+                        </span>
+                    </div>
+                </div>
+                </p>
+            </div>
+            <div class="section">
+                <h2>If deyimi nasıl çalışır?</h2>
+                <p>Programın akışı if deyiminin olduğu satıra geldiğinde if parantezi içindeki, true ya da false değer
+                    üretecek koşul ifadesi çalıştırılır. Koşul true değer üretirse yukarıdaki örnekte olduğu gibi kod
+                    bloğu içindeki komut çalıştırılır değilse çalıştırılmaz.</p>
+            </div>
+            <div class="section">
+                <h2>else deyimi</h2>
+                <p>else deyimi eğer if deyiminin içindeki koşul false değer üretirse başka bir komut çalıştırmak için
+                    kullanılır.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">if</span> (koşul) <br>{<br> &emsp; <span class="comment">//Komut 1:
+                                Koşul doğru ise çalıştırılacak komut</span> <br>
+                            } <br>
+                            <span class="keyword">else</span> <br> { <br> <span class="comment">//Komut 2: Koşul yanlış
+                                ise çalıştırılacak komut</span> <br> }
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">int </span> yas = <int class="number">15</int>;<br> <br>
+                            <span class="keyword">if</span> (yas >= <span class="number">18</span> ) <br>
+                            <span> &emsp; print</span> (<span class="string">'yetiskin'</span>);<br>
+                            <span class="keyword">else</span> <br>
+                            <span> &emsp; print</span> (<span class="string">'cocuk'</span>);<br>
+                            <span class="comment">//'çocuk' çıktısını verir.</span>
+                        </span>
+                    </div>
+                </div>
+                <p>Yukarıdaki örnekte olduğu gibi eğer komutlar tek satırdan oluşuyorsa süslü parantez içine almak
+                    zorunlu değildir. yas değişkeni 15 olduğu için if parantezi içindeki koşul ifadesi false değer
+                    üretir ve else deyimi için olan komut çalışır.
+                </p>
+            </div>
+            <div class="section">
+                <h2>if else if deyimi</h2>
+                <p>if else if deyimi test edilecek farklı koşullar eklenmesine olanak sağlar.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Syntax</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">if</span> (koşul1) <br> { <br> <span class="comment">&emsp; //Komut 1:
+                                Koşul doğru ise çalıştırılacak komut</span><br> } <br> <span class="keyword">else
+                                if</span> <span>(koşul2)</span> <br> {
+                            <br> <span class="comment">&emsp; //Komut 2: koşul1 yanlış ve koşul2 doğru ise
+                                çalıştırılacak komut</span>
+                            <br>
+                            } <br> <span class="keyword">else</span> <br> { <br><span class="comment">&emsp;//Komut 3:
+                                koşul1
+                                ve koşul2 yanlış ise çalıştırılacak komut</span><br> }
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">int</span> saat = <span class="number">15</span>;<br><br>
+                            <span class="keyword">if</span>(saat == <span class="number">10</span>) <br>
+                            {<br> &emsp;
+                            print(<span class="string">'Günaydın'</span>);<br>
+                            } <br>
+                            <span class="keyword">else if</span> (<span class="number">12</span>&lt;saat&lt;18) <br>
+                            {<br> &emsp;
+                            print (<span class="string">'iyi günler'</span>);<br>
+                            } <br>
+                            <span class="keyword">else</span><br>
+                            {
+                            <br> &emsp; print(<span class="string">'iyi akşamlar'</span>); <br>
+                            } <br> <span class="comment">// 'İyi günler' çıktısını verir.</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <a href="#" class="to-top">
+        başa dön
+    </a>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Concatenation
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Concatenation (String birleştirme)</h1>
+            <img class="definition" src="/img/concatenate.png" alt="concatenation">
+            <div class="section">
+                <h2>Concatenation nedir?</h2>
+                <p>Concatenation Türkçe’ye birleştirme olarak çevrilebilir. Peki concatenation nedir?
+                    Dart programlama dilinde stringleri birleştirme eylemine concatenation denir. Stringleri
+                    birleştirmenin birkaç yolu vardır.</p>
+                <h2>+ operatörü</h2>
+                <p>+ operatörü ile stringler birleştirilebilir.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span><span class="keyword">print</span>( <span class="string">'Dart'</span> + <span
+                                class="string">'ve'</span> + <span class="string">'Flutter'</span> + <span
+                                class="string">'öğrenelim'</span> );<br>
+                            <span class="comment">//Çıktı : "DartveFlutteröğrenelim"</span></span>
+                    </div>
+                </div>
+                <p>+ operatörü kullanmadan bitişik string literallar ile de aynı işlem görülebilir.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">print</span>(<span class="string">'Dart' 've' 'Flutter'
+                                'öğrenelim'</span>);<br> <span class="comment">//Çıktı : "DartveFlutteröğrenelim"</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Interpolation</h2>
+                    <p>Dart programlama dilinde Interpolation ile bir değişkenin değeri bir expression ile
+                        birleştirilebilir. <br>
+                        Expression’ın değeri string içerisine ${expression} şeklinde konulabilir. <br> Expression bir
+                        Identifier ise süslü parentezlere gerek yoktur, $identifier şeklinde konulabilir.</p>
+                    <div class="example">
+                        <div class="exampleTitle">Örnek</div>
+                        <div class="insideExample">
+                            <span>
+                                <span class="keyword">String</span> s1 = <span
+                                    class="string">'interpolation'</span>;<br><br>
+                                <span class="keyword">print</span>(<span class="string">'Dart dilinde</span> $s1 <span
+                                    class="string">vardır.'</span></span>);<br><span class="comment">//Çıktı: "Dart
+                                dilinde interpolation
+                                vardır."</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="exampleTitle">Örnek</div>
+                        <div class="insideExample">
+                            <span class="keyword">String</span> s1 = <span
+                                class="string">'interpolation'</span>;<br><br> <span class="keyword">print</span>(<span
+                                <span class="keyword">print</span>(<span class="string">'Dart dilinde</span> {$s1.<span
+                                class="keyword">toUpperCase</span>()} <span
+                                class="string">vardır.'</span></span>);<br><span class="comment">//Çıktı: "Dart
+                                dilinde INTERPOLATION
+                                vardır."</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Tırnak İşareti</h2>
+                    <p>Dart programlama dilinde çok satırlı string, üçlü tek tırnak ( ‘ ‘ ‘ ) ya da üçlü çift tırnak ( ”
+                        ” ” ) ile oluşturulabilir.</p>
+                    <div class="example">
+                        <h3 class="exampleTitle">Örnek</h3>
+                        <div class="insideExample">
+                            <span class="keyword">String</span> <span>cokluSatir = </span>
+                            <span class="string">'''<br>Bunu yaparak <br>çok <br> satırlı <br>stringler <br>elde
+                                edebilirsiniz.'''</span>
+                            <span>;</span><br><span class="keyword">print</span><span>(cokluSatir);</span><br><span
+                                class="comment">/*'''<br>Bunu yaparak <br>çok <br> satırlı <br>stringler <br>elde
+                                edebilirsiniz.'''*/</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Raw String</h2>
+                    <p>Dart programlama dilinde raw stringlerde \ gibi karakterler özel muamele görmezler, string
+                        içerisine yazılan her karakter yazıldığı gibi çıkar. Raw String elde edebilmek için tırnak
+                        işaretinin başına r harfi konulmalıdır.</p>
+                    <div class="example">
+                        <h3 class="exampleTitle">Örnek</h3>
+                        <div class="insideExample">
+                            <span><span class="keyword">String </span>rawString = <span class="string">r'Raw stringlerde
+                                    \n alt satıra geçirmez.'</span>;</span><br><br>
+                            <span class="keyword">print </span><span>rawString();</span><br><span
+                                class="comment">//Çıktı:
+                                "Raw stringlerde \n alt satıra geçirmez."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+        <footer></footer>
+    </main>
+
+</body>
+
+</html>

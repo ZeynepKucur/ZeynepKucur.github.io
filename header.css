@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
+
+.header {
+  background-color: deepskyblue;
+}
+
+header {
+  width: 80%;
+  margin: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row no wrap;
+  gap: 5%;
+  height: 50px;
+  justify-content: start;
+  height: 60px;
+}
+
+nav ul li {
+  order: 2;
+  display: flex;
+  flex-basis: 10%;
+  justify-content: center;
+  align-content: center;
+  border-top: 3px solid salmon;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "lato", sans-serif;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  align-self: center;
+}
+
+.flex1 {
+  order: 1;
+  border: none;
+  flex-basis: 5%;
+}
+
+.responsive {
+  width: 50px;
+}

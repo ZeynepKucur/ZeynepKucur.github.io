@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart For Döngüsü
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart For döngüsü</h1>
+            <p>Bir kod bloğu belirli sayıda döndürülmek istendiğinde for döngüsü kullanılır.
+                For döngüsü yineleyici olarak bir değişken alır ve ona bir başlangıç değeri atanır ve koşul doğru olduğu
+                sürece döngü gövdesi yinelenir.</p>
+            <div class="example">
+                <h3 class="exampleTitle">Syntax</h3>
+                <div class="insideExample">
+                    <span>
+                        <span class="keyword">for</span> (ifade1 ; ifade2 ; ifade3) <br>
+                        {<br>
+                        <span class="comment"> &emsp; //Döngü boyunca yürütülecek kod bloğu</span><br>
+                        }
+                    </span>
+                </div>
+            </div>
+            <p><strong>İfade1</strong> kod bloğu yürütülmeden önce sadece bir kere çalıştırılır.Bundan sonraki
+                iterasyonlarda (yinelemelerde)<strong> ifade1</strong> bir daha çalıştırılmaz.
+                <br><strong>İfade2</strong> kod bloğunun
+                yürütülmesi için gerekli olan koşulu tanımlar yani İfade2 çalıştırıldıktan sonra true değer üretiyorsa
+                döngü devam eder.
+                Eğer koşul sağlanamazsa döngüden çıkılır.<br><strong>İfade3</strong>kod bloğu yürütüldükten sonra
+                çalıştırılır.
+            </p>
+            <div class="example">
+                <h3 class="exampleTitle">Örnek</h3>
+                <div class="insideExample">
+                    <span>
+                        <span class="keyword">for</span>(int i = <span class="number">0</span>; i&lt;<span
+                            class="number">5</span>; i++) <br> { <br>
+                        <span class="keyword">&emsp;print</span>(<span class="string">'Dart eğlenceli'</span>);<br>
+                        } <br>
+                        <span class="comment">// 5 kere 'Dart eğlenceli' yazar.</span>
+                    </span>
+                </div>
+            </div>
+            <div class="example">
+                <h3 class="exampleTitle"> </h3>
+                <div class="insideExample">
+                    <span>
+                        <span class="keyword">int</span> toplam = <span class="number">0</span>;<br>
+                        <span class="keyword">&emsp; for</span> (int i = <span class="number">0</span>; i&lt;<span
+                            class="number">4</span>; i++) {
+                        <br>&emsp; &emsp; toplam+= i; <br>
+                        <span class="keyword">&emsp; &emsp; print</span>(<span class="string">'Toplam =</span> $toplam<span class="string">'</span>);<br>
+                        &emsp; } <br> <span class="comment">/* Her yinelemede 'toplam'ın değerini yazar. <br>
+                            Toplam = 0 <br> Toplam = 1 <br> Toplam = 3 <br> Toplam = 6 */</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

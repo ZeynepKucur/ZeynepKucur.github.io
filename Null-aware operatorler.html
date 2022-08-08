@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Null Aware Operatörler
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Null-aware Operatörler</h1>
+            <p>Null aware operatörler, değerin null olup olmamasına göre işlem yapan operatörlerdir.</p>
+            <ul class="contentUl">
+                <li>If-null operatörü (??)</li>
+                <li>Null-aware atama operatörü (??=)</li>
+                <li>Null-aware access operatörü (?.)</li>
+                <li>Null-aware metod çağırma operatörü (?.)</li>
+                <li>Null assertion operatörü (!)</li>
+                <li>Null-aware cascade operaötrü (?..)</li>
+                <li>Null-aware index operatörü (?[])</li>
+            </ul>
+            <div class="section">
+                <h2>Dart If-null operatörü (??)</h2>
+                <p>Dart programlama dilinin null değer taşıyor olma olasılığı olan değerler üzerinde işlem yapan
+                    operatörlerinden biridir.
+                    ?? operatörü solundaki değer null değilse o değeri kullanır, null ise sağındaki değeri kullanır.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">String?</span> isim;<br>
+                            <span class="keyword">final</span> ad = isim ?? <span class="string">'Anonim'</span>;<br>
+                            print (ad); <span class="comment">//Çıktı: Anonim</span>
+                        </span>
+                    </div>
+                </div>
+                <p>
+                    Yukarıdaki örnekte <strong>isim</strong> değişkeni <strong>null</strong> olduğu için
+                    <strong>??</strong> operatörü <strong>isim</strong> değişkenine sağındaki değer olan
+                    <strong>'Anonim'</strong>i atar.&emsp; ?? operatörü bu şekilde <strong>ad</strong> değişkeninin
+                    hiçbir
+                    zaman null olmamasını sağlar.
+                    <br>
+                    ?? operatörü kullanılan yukarıdaki örnek aşağıdaki koda eşdeğer:
+                </p>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">String</span> ad;<br>
+                            <span class="keyword">if</span> (isim == <span class="keyword">null</span>){<br>
+                            &emsp; ad = <span class="string">'Anonim'</span>; <br>
+                            } <span class="keyword">else</span> { <br>
+                            &emsp; ad = isim; <br>
+                            }
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Dart Null-aware assignment operatörü (??=)</h2>
+                <p>Dart’ın sunduğu başka bir null-aware operatör olan <strong> ??=</strong> ile bir değişkenin null olup
+                    olmadığı kontrol edilip null ise ona değer atanabilir.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">int?</span> sayi; <br>
+                            <span class="keyword">sayi ??</span> = <span class="number">100</span>;<br>
+                            print (sayi); <span class="comment">//Çıktı: 100</span><br>
+                            sayi ??= <span class="number">10</span>; <span class="comment">//derleyici uyarı
+                                verir</span><br>
+                            print(sayi);
+                        </span>
+                    </div>
+                </div>
+                <p><strong>sayi</strong> değişkeni <strong>int?</strong> türünde yani <strong>null</strong> ya da
+                    <strong>int</strong>türünde tanımlanmıştır ve hiçbir değer atanmamıştır. ??= operatörü sayi
+                    değişkeninin null olup olmadığını kontrol eder, null olduğu için 100 değerini atar. print ile
+                    yazdırıldığında değerinin 100 olduğu görülür. sayi değişkeni artık null olmadığı için <strong> ‘sayi
+                        ??= 10;‘</strong> satırında derleyeci uyarı verir ve null olmadığı için 10 değeri atanmaz. print
+                    ile yazdırıldığında
+                    sayi değişkeninin değerinin değişmediği görülür.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Dart Null-aware access (erişim) operatörü (?.)</h2>
+                <p>Null olabilecek bir nesnenin property ya da metoduna erişimi korumak için kullanılır. Null-aware
+                    access ?. operatörü sol tarafındaki null ise null olarak döner değilse erişimi sağlar.
+                </p>
+                <div class="example">
+                    <div class="insideExample">
+                        <span class="keyword">int? yas;</span><br>
+                        print(yas?.isNegative);<span class="comment"> //Çıktı: null</span>
+                    </div>
+                </div>
+                <p>Dart dilinin sağladığı null aware access operatörü olmasaydı yukarıdaki kod hata verirdi.
+                    <strong>?.</strong>
+                    operatörü yas değişkeni <strong>null</strong> olduğu için <strong>null</strong> değerini döndürür.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Dart Null assertion operatörü ( ! )</h2>
+                <p>Null olabilen bir değişkenin değerinin null olmadığından emin olunuyorsa null assertion operatörü ( !
+                    ) ile Dart’ın o değişkeni null olamayan bir tip olarak görmesi sağlanabilir.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Fonksiyon örneği</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">bool?</span> yetiskinMi(<span class="keyword">int?</span> yas) {<br>
+                            &emsp; <span class="keyword">if</span> ( yas == <span class="number">18</span>) { <br>
+                            &emsp; &emsp; <span class="keyword">return</span> <span class="number">true</span>;<br>
+                            } <span class="keyword">else if</span> (yas == <span class="number">10</span>) { <br>
+                            &emsp; &emsp; <span class="keyword">return</span> <span
+                                class="number">false</span>;<br>&emsp; } <br>
+                            &emsp;<span class="keyword">return</span> <span class="number">false</span>;
+                            <br> } <br>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> main(){ <br>
+                            &emsp; <span class="keyword">bool</span> yetiskin = yetiskinMi(<span
+                                class="number">10</span>);<br>
+                            }
+                        </span>
+                    </div>
+                </div>
+                <p>yetiskinMi fonksiyonu null ya da bool olabilir. yetiskin değişkeni ise null olamayan bool türündedir.
+                    Derleyeci bool? türünde bir değişkenin bool türüne atanamayacağı hatasını verir. İşte burada
+                    yetiskinMi(10)’un null değer döndürmeyeceğinden emin olunduğundan bu hata <strong> null assertion (
+                        ! ) </strong>ile
+                    düzeltilebilir.
+                </p>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> main(){ <br>
+                            &emsp; <span class="keyword">bool</span> yetiskin = yetiskinMi(<span
+                                class="number">10</span>)!;
+                            <br>}
+                        </span>
+                    </div>
+                </div>
+                <p>Yukarıdaki gibi <strong>!</strong> eklendiğinde hata ortadan kalkar. Null assertion operatörünün çok
+                    dikkatli
+                    kullanılması gerekir çünkü bu operatör ile Dart’ın Null Safety özelliği devre dışı bırakılmış olur.
+                    Null olabilen bir expression üzerinde yanlış bir şekilde null assertion operatörü ( ! )
+                    kullanıldığında yapılan hata run-time’da ortaya çıkar.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Dart Null-aware cascade operatörü (?..)</h2>
+                <p>Cascade operatörü aynı nesne üzerinde birden çok işlem yapılmasına olanak sağlar. Null olabilen
+                    nesnelerde null-aware cascade operatörü (?..) kullanılabilir.Cascade operatörü aynı nesne üzerinde
+                    birden çok işlem yapılmasına olanak sağlar. Null olabilen nesnelerde null-aware cascade operatörü
+                    (?..) kullanılabilir.
+                </p>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">class</span> Kullanici { <br>
+                            &emsp; <span class="keyword">String?</span> ad; <br>
+                            &emsp; <span class="keyword">int?</span> ad; <br>
+                            }
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> main(){ <br>
+                            &emsp; <span class="keyword">Kullanici?</span> kullanici1; <br>
+                            &emsp; kullanici1 <br>
+                            &emsp; ?..ad = <span class="string">'Zeynep'</span><br>
+                            &emsp; ..id = <span class="number">1</span>;<br>
+                            }
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Dart Null-aware index operatörü (?[ ])</h2>
+                <p>Null aware index operatörü ?[ ] null olabilecek bir list’in elemanlarına erişmek için kullanılır.</p>
+            </div>
+        </div>
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+    </main>
+<footer></footer>
+</body>
+
+</html>

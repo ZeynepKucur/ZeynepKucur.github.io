@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Veri Tipleri
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Veri Tipleri</h1>
+            <div class="section">
+                <h2>Veri tipi nedir?</h2>
+                <p>Veri tipleri her dilin en önemli temel özelliklerindendir. Değişken, bir değeri tutmak için
+                    kullanılan bir bellek konumuna verilen addır. Veri tipi, değişken tarafından ne tür bir değerin
+                    tutulacağını belirtir. Her değişkenin bir veri tipi vardır.</p>
+            </div>
+            <div class="section">
+                <h2>Dart veri tipleri nelerdir?</h2>
+                <p>Dart aşağıdaki yerleşik veri tipleri için özel desteğe sahip:</p>
+                <ul class="contentUl">
+                    <li>Numbers&nbsp;(int, double)</li>
+                    <li>Strings&nbsp;(string)</li>
+                    <li>Booleans&nbsp;(bool)</li>
+                    <li>Lists (list)</li>
+                    <li>Sets (set)</li>
+                    <li>Maps (map)</li>
+                    <li>Runes (runes)</li>
+                    <li>Symbols&nbsp;(symbol)</li>
+                    <li>The value null (null)</li>
+                </ul>
+                <p>Aşağıdaki türler de Dart dilinde özel rollere sahip:</p>
+                <ul class="contentUl">
+                    <li>Object: Null hariç tüm Dart sınıflarının üst sınıfı</li>
+                    <li>Future ve Stream: Eşzamansız (asynchrony) destekte kullanılır.</li>
+                    <li>Iterable: for-in döngülerinde ve senkron üreteç fonskiyonlarında kullanılır.</li>
+                    <li>Never: Bir ifadenin değerlendirmeye hiçbir zaman başarıyla tamamlayamacağını belirtir. Genelde
+                        istisna oluşturan fonskiyonlarda kullanılır.</li>
+                    <li>dynamic: Statik denetim devre dışı bırakılmak istendiğinde kullanılır.</li>
+                    <li>void: Genellikle dönüş türü (return type) olarak kullanılır, bir değerin asla kullanılmadığını
+                        belirtir.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Dart Numbers (Sayılar):</h2>
+                <p>Dart dilinde sayılar iki şekilde destekleniyor: int ve double
+                    Hem int hem double, num‘ın alt türleridir. num olarak tanımlanan bir değişken hem int hem double
+                    değeri alabilir.</p>
+                <p><span class="bold">int</span> <br>
+                    int veri türü tam sayılar için kullanılır ve değeri platforma bağlı olarak 64 bitten fazla olamaz.
+                    native platformlarda değeri -263 ile 263 – 1 arasında olabilir. Web’de ise, tam sayı değerleri
+                    JavaScript sayıları olarak gösterilmektedir ve değerleri -253 ile 253 – 1 arasında olabilir.</p>
+                <p> <span class="bold">double</span><br>
+                    double, IEEE 754 standardı tarafından belirtildiği gibi 64 bit (çift duyarlıklı) kayan noktalı
+                    sayılardır.</p>
+            </div>
+            <div class="section">
+                <h2>Strings:</h2>
+                <p>Dart’ta string, bir dizi UTF-16 kod birimini tutar. Dart dilinde char veri tipi bulunmamaktadır. Tek
+                    harf bile
+                    olsa string veri tipi ile saklanır. Tek tırnak ( ‘ ‘ ) ya da çift tırnak ile ( ” ” ) ile string
+                    oluşturalabilir.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+<span><span class="keyword">String</span> s1 = <span class="string">'Dart öğreniyorum'</span>;</span><br><br>
+<span><span class="keyword">String</span> s2 = <span class="string">"Çift tırnakla da string  oluşturulabiliyor"</span>;</span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+<span><span class="keyword">String</span> s3 = <span class="string">"Dart'ın özelliği"</span>;</span><br><br>
+<span><span class="keyword">String</span> s4 = <span class="string">'Dart\'ın özelliği'</span>;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Booleans</h2>
+                <p>Dart dilinde <span class="bold">bool</span> anahtar kelimesi Boolean değerlerini temsil etmek için kullanılır. 
+                    Sadece <span class="bold">true</span> ve <span class="bold">false</span> bool türündedir.</p>
+            </div>
+            <div class="section">
+                <h2>Lists:</h2>
+                <p>Nesne koleksiyonunu temsil etmek için list veri tipi kullanılır.Diğer dillerdeki array veri tipine benzer.
+                    Dart dilinde array bulunmasa da list array’in sağlayabildiği hemen hemen her şeyi sağlar.
+                    Lists sıralı koleksiyon nesneleridir yani her elemanın index ile erişilebilen belirli bir pozisyonu vardır.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Dart dilinde list tanımlama örnekleri:</h3>
+                    <div class="insideExample">
+<span><span class="keyword">var</span> list1 = [<span class="number">1</span> ,<span class="number">2</span> ,<span class="number">3</span>]</span>
+                    </div>
+                </div>
+                <p>var ile tanımlanmış yukarıdaki kodda Dart type inference ( tür çıkarımı ) özelliği ile list1’in <span class="bold">List < int ></span> (int
+                        tipinde elemanlı List) olduğu çıkarımını yapar.</p>
+                <div class="example">
+                    <div class="insideExample">
+<span><span class="keyword">var</span> list2 = [<span class="string">'Dart'</span> ,<span class="string">'programlama dili'</span>]</span>
+                    </div>
+                </div>
+                <br> <br>
+                <h3 style="font-weight:bold;">Constructor ile List tanımlama:</h3>
+                <p>List constructor ile List tanımlanabilir.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+<span><span class="keyword">var</span> createList  = <span class="variable2">List</span>();</span>
+                    </div>
+                </div>
+                <p>Yukarıdaki şekilde List oluşturulduğunda boş bir List elde edilir.
+                    <br><br>
+                    List içereceği veritipi ile birlikte aşağıdaki şekilde tanımlanabilir:
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Syntax</h3>
+                    <div class="insideExample">
+<span class="keyword">var </span>listAdı = List&lt;veriTipi&gt;();</span></span>
+                    </div>
+                </div>
+                <p>List veritipi de array veritipi gibi sıfır tabanlı indeksleme sistemini kullanılır. sıfır ilk değerin indeksidir,
+                    list.length-1 son değerin indeksidir.</p>
+
+                    <div class="example">
+                        <h3 class="exampleTitle"></h3>
+                        <div class="insideExample">
+<span><span class="keyword">var</span> list3 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span>
+<br><br>
+<span class="keyword">print</span><span>(list3.lengh);</span><span class="comment">//.length listenin uzunluğunu hesaplar.Sonuç 5 olarak çıkar.</span>
+<br><br>
+<span class="keyword">print</span><span>(list3[3]);</span><span class="comment">//3.indeksin değeri olan 4'ü yazdırır.</span>                        
+                        </div>
+                    </div>
+                    <div class="section">
+<p>Dart 2.3 ile versiyonu <span class="bold">spread operator (…) ve the null-aware spread operator (…?)</span>‘lerini tanıttı.</p>
+
+<p><span class="bold">spread operator(…)</span> ile bir listenin bütün değerlerini başka bir listeye yerleştirebilirsiniz.</p>
+<div class="example">
+    <h3>Örnek</h3>
+    <div class="insideExample">
+<span><span class="keyword"> list4 </span>= [<span class="number">10</span>, <span class="number">20</span>];</span><br><br>
+<span><span class="keyword"> list5 </span>= [...list4,<span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>];<span class="comment">//list4, list5'e dahil edilir.</span> </span>
+    </div>
+</div>
+<p> <span class="bold">the null-aware spread operator (…?)</span>operatörün sağındaki ifadenin boş olup olmadığını denetler eğer boşsa o ifadeyi katmaz.</p>
+                        <div class="example">
+                            <h3 class="exampleTitle">Örnek</h3>
+                            <div class="insideExample">
+<span><span class="keyword">var</span>list6;</span><br><br>
+<span><span class="keyword">var</span>list7; = [<span class="number">100</span>...?list6];</span>
+                            </div>
+                        </div>
+                        <p>list6’ya değer atanmadığı için null’dur. <span class="bold">…?</span> operatörü kullanılarak null ifade eklemeye çalışmaktan kaynaklanan hatadan kaçınılabilir.</p>
+                    </div>
+            </div>
+            <div class="section">
+                <h2>Sets:</h2>
+                <p>Dart dilinde Set benzersiz öğelerin sırasız koleksiyonudur. Tekrarlayan öğeler bulunmaz.</p>
+                <p>Set-leri tanımlamanın iki yolu vardır.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+<span><span class="variable2">Set</span> &ltdeğişken_türü&gt değişken_adı = {};</span>
+<br><br>
+<span><span class="keyword">var</span> değişken_adı = &ltdeğişken_türü&gt{};</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Maps:</h2>
+                <p>Map(harita), anahtarları ve değerleri ilişkirendiren bir nesnedir. Hem anahtarlar hem de değerler herhangi bir nesne türü olabilir. Anahtarların benzersiz olması gerekir.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample"><span><span class="keyword">var </span>sayılar={
+<br><br><span class="comment">//anahtar: değer</span>
+<br><br><span class="number">1</span>: <span class="string">'bir'</span><br><br>
+<span class="number">2</span>: <span class="string">'iki'</span><br><br>
+<span class="number">3</span>: <span class="string">'üç'</span>
+};</span></div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Runes:</h2>
+                <p>Stringler bir dizi karakterden oluşur. Dart stringleri Unicode UTF-16 kod birimleri dizisi olarak temsil eder.
+                    Unicode dünyadaki tüm yazım sistemlerinde kullanılan her harf, rakam ve sembol için benzersiz bir sayısal değer
+                    tanımlayan bir biçimdir. Rune bir Unicode kod noktasını temsil eden tamsayıdır.</p>
+            </div>
+            <div class="section">
+                <h2>Symbols:</h2>
+                <p>Semboller, Dart programında tanımlanmış olan bir operatörü ya da identifier’ı (tanımlayıcı) temsil ederler.Değiştirilemeyen ve derleme süresi boyunca sabit kalan dinamik string adlardır.</p>
+            </div>
+        </div>
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+    </main>
+        <footer></footer>
+</body>
+
+</html>

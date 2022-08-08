@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Anonim Fonksiyonlar
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Anonim Fonksiyonlar</h1>
+            <p>Dart dilinde her fonksiyonun bir ismi olmayabilir. Aynı zamanda lambda ve closure olarak da bilinen
+                Anonim fonksiyonlar tıpkı diğer fonksiyonlar gibidir ama isimleri ve geridönüş tipleri yoktur. Bir
+                anonim fonksiyon hiç ya da birden çok parametre alabilir.
+                Dart dilinde anonim fonksiyonlar değişkenlere değer ve fonksiyonlara parametre olarak atanabilirler.
+            </p>
+            <div class="example">
+                <h3 class="exampleTitle">Anonim Fonksiyon sözdizimi</h3>
+                <div class="insideExample">
+                    <span>(parametreler){<br>
+                        &emsp;...
+                        <br>}
+                    </span>
+                </div>
+            </div>
+            <div class="example">
+                <h3 class="exampleTitle">Anonim Fonksiyon örneği</h3>
+                <div class="insideExample">
+                    <span>
+                        (int yas){<br>
+                        <span class="keyword">&emsp; return</span> <span class="string">'yaş:</span> $yas<span
+                            class="string">'</span>;<br>
+                        }
+                    </span>
+                </div>
+            </div>
+            <p>Fonksiyonun geri dönüş tipi geri dönüş değerinden anlaşılır.</p>
+            <div class="section">
+                <h2>Fonksiyonları değişkenlere atama</h2>
+                <p>Değişkene değer atanacağı zaman fonksiyonlar da veri tipi olarak kullanılabilirler.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">int</span> sayi = <span class="number">7</span>;<br>
+                            <span class="keyword">String</span> karsilama = <span class="string">'Hoşgeldin'</span>;<br>
+                            <span class="keyword">bool</span> isGood = <span class="keyword">true</span>;<br>
+                            <span class="keyword">Function</span> carpim = (int x , int y ) { <br>
+                            <span class="keyword">&emsp; return</span> x*y;<br>
+                            };
+                        </span>
+                    </div>
+                </div>
+                <p>sayi’nın türü int, karsilama’nin türü String, isGood’un türü bool olduğu gibi carpim değişkeninin
+                    türü de Function’dır.
+                    <strong>İsimli fonksiyonlar değişkenlere atanamazlar ama anonim fonksiyonlar
+                        değişkenlere atanabilirler.
+                    </strong>
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">İsimli fonksiyonlar değişkenlere atanamazlar</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">Function</span> fonksiyon = <span class="keyword">int</span>
+                            isimliCarpim(<span class="keyword">int</span> x, <span class="keyword">int</span> y){
+                            <br><span class="keyword">return</span> x * y; <br>
+                            }; <span class="comment">//Hata verir: "Function expressions can't be named."</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Fonksiyonlardan fonksiyon döndürmek</h2>
+                <p>Anonim fonksiyonlar, isimli fonksiyonların return output’u olabilirler:</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span class="keyword">Function</span> isimliFonksiyon() {<br>
+                        <span class="keyword"> &emsp; return</span>() { <br>
+                        &emsp; &emsp; print(<span class="string">'Hey'</span>);<br>
+                        &emsp; };<br>
+                        }
+                    </div>
+                </div>
+                <p>Yukarıdaki fonksiyonun dönüş değeri Function tipinde bir anonim fonksiyondur.</p>
+            </div>
+            <div class="section">
+                <h2>Anonim Fonksiyonların kullanımı</h2>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">Function</span> fonksiyon = (<span class="keyword">int</span> x, <span
+                                class="keyword">int</span> y){
+                            <br><span class="keyword">&emsp; return</span> x * y; <br>
+                            }
+                        </span>
+                    </div>
+                </div>
+                <p>Yukarıda Function tipinde carpim değişkeni tanımlı ve bu carpim değişkinene değer olarak bir anonim
+                    fonksiyon atalı.
+                    carpim değişkenine atalı bu fonksiyonu çağırmak için değişkenin adını yazıp parantez içine argüman
+                    yazmak gerekiyor.
+                </p>
+                <div class="example">
+                    <div class="insideExample">
+                        <span>
+                            print (<span class="keyword">carpim</span>(<span class="number">3</span>, <span
+                                class="number">5</span>)); <span class="comment">//Çıktı: 15</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

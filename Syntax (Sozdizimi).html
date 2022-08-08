@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Syntax
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Syntax (Sözdizimi)</h1>
+            <p>Sözdizimi, çeşitli sembol kombinasyonlarının ne anlama geldiğini tanımlayan kurallar dizisidir. Her dilin
+                bilgisayara kodu nasıl okuması gerektiğini söyleyen kendine has sözdizim kuralları vardır. <br>
+                Dart’ın sözdizimi Java ve C#’ın sözdizimine benzerlik göstermektedir. Java ve C# geçmişi olanlar çabucak
+                Dart’ın syntax’ını benimseyebilirler.</p>
+            <div class="section">
+                <h2>Dart Identifiers (Tanımlayıcılar)</h2>
+                <p>Identifierlar (tanımlayıcılar) programdaki değişken, sınıf, fonskiyon gibi elemanlara verilen
+                    isimlerdir.
+                    Bu
+                    isimler tanımlanmadan önce uyulması gereken kurallar bulunmaktadır.</p>
+            </div>
+
+            <ul class="contentUl">
+                <li>İlk karakter büyük ya da küçük bir harf ya da _(alt tire) olmalıdır.</li>
+                <li>Bir sayı ile başlayamaz.</li>
+                <li>Boşluk içeremez.</li>
+                <li>$ (dolar sembolü) ve _ (alt tire) dışında özel semboller içeremez.</li>
+                <li>Büyük küçük harf duyarlıdır.</li>
+                <li>Keywordler identifier olarak kullanılamaz.</li>
+            </ul>
+            <div class="section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Geçerli Identifierlar</th>
+                            <th>Geçersiz Identifierlar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ikinci_ad</td>
+                            <td>2.ad</td>
+                        </tr>
+                        <tr>
+                            <td>ikinciAd</td>
+                            <td>class</td>
+                        </tr>
+                        <tr>
+                            <td>ad2</td>
+                            <td>ad-2</td>
+                        </tr>
+                        <tr>
+                            <td>$ikinciAd</td>
+                            <td>ikinci ad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>Dart'ta Yorum</h2>
+                <p>Yorumlar derleyeci tarafından okunmayan, gözardı edilen kod parçalarıdır.</p>
+                <p class="pTogether">Dart'ta
+                    <br> ‘ // ‘ tek satır yorum oluşturmak için kullanılır.
+                    <br>‘ /*…..*/ ‘ çoklu satır yorum oluşturmak için kullanılır.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span class="comment">
+                            //Bu tek satır bir yorumdur <br><br>
+                            /* Bu <br><br>
+                            çoklu satır <br> <br>
+                            yorumdur.*/</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Dart'ta Noktalı Virgül</h2>
+                <p>Dart’ta, C#’ta olduğu gibi noktalı virgül ifade sonlandırıcı olarak kullanılmaktadır. <br>
+                    Her bir statement noktalı virgül ile sonlandırılmalıdır.</p>
+            </div>
+
+            <a href="#" class="to-top">
+                başa dön
+            </a>
+        </div>
+
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>

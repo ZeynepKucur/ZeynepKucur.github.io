@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Fiesta21 1.12.001">
+    <meta name="language" content="en">
+    <meta name="revised" content="Monday, July 25th, 2022, 11:50 am">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>
+        Dart Operatörler
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="site.css" rel="stylesheet" type="text/css">
+    <link href="dartPages.css" rel="stylesheet" type="text/css">
+    <script defer src="Js.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li class="flex1">
+                        <a href="homepage.html">
+                            <img class="responsive" src="img/webiconsmall8.png"
+                                alt="The logo of dartveflutterogrenelim">
+                        </a>
+                    </li>
+                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="Dart Introduction.html">DART</a></li>
+                    <li><a href="Flutter.html">FLUTTER</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="sidebar" id="sidebarLinks">
+        <ul id="links">
+            <li><a href="Dart%20Introduction.html">Dart Introduction</a></li>
+            <li><a href="Syntax%20(Sozdizimi).html">Dart Syntax (Sözdizimi)</a></li>
+            <li><a href="DartKeywords.html">Dart Anahtar Kelimeleri</a></li>
+            <li><a href="Degiskenler.html">Dart Degişkenler</a></li>
+            <li><a href="Veri%20Tipleri.html">Dart Veri Tipleri</a></li>
+            <li><a href="Type%20Safety.html">Dart Type Safety</a></li>
+            <li><a href="Type%20Inference.html">Dart Type Inference</a></li>
+            <li><a href="StaticallytypedDynamic.html">Dart Statically-typed&Dynamic</a></li>
+            <li><a href="Concatenation.html">Dart Concatenation (String birleştirme)</a></li>
+            <li><a href="Operatorler.html">Dart Operatörler</a></li>
+            <li><a href="Akis%20Kontrol%20Mekanizmalari.html">Dart Akış Kontrol Mekanizmalari</a></li>
+            <li><a href="IfElse.html">Dart If...Else</a></li>
+            <li><a href="Switch.html">Dart Switch</a></li>
+            <li><a href="For%20dongusu.html">Dart For döngüsü</a></li>
+            <li><a href="For%20in%20dongusu.html">Dart For in döngüsü</a></li>
+            <li><a href="While,%20do%20while.html">Dart While, do while</a></li>
+            <li><a href="BreakContinue.html">Dart Break,Continue</a></li>
+            <li><a href="Assert.html">Dart Assert</a></li>
+            <li><a href="Fonksiyonlar,%20Parametreler.html">Dart Fonksiyonlar, Parametreler</a></li>
+            <li><a href="Anonim%20Fonksiyonlar.html">Dart Anonim Fonksiyonlar</a></li>
+            <li><a href="Null%20Safety.html">Dart Null Safety</a></li>
+            <li><a href="Null-aware%20operatorler.html">Dart Null-aware operatörler</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Operatörler</h1>
+            <div class="section">
+                <h2>Operatör nedir?</h2>
+                <p>Operatörler, işlenenler (operand) üzerinde önceden tanımlanmış bir takım matematiksel, mantıksal
+                    işlemleri gerçekleştirmek için kullanılan özel sembollerdir.</p>
+            </div>
+            <div class="section">
+                <h2>Operand nedir?</h2>
+                <p>Operatörle birlikte işleme sokulan ve operatörden etkilenen değerlerdir.</p>
+
+                <h3>Operand ve Operatör örnekleri:</h3>
+                <p>d + f Burada operatör +, operandler ise d ve f‘dir. <br>++v
+                    Burada operatör ++, operand ise v‘dir.</p>
+            </div>
+            <div class="section">
+                <h2>Etki ettikleri operand sayısına göre operatörlerin sınıflandırılması:</h2>
+                <ul class="contentUl">
+                    <li>Unary Operatörler: Tek operandı olan öperatörlerdir.</li>
+                    <li>Binary Operatörler: İki operandı olan öperatörlerdir.</li>
+                    <li>Ternary Operatörler: Üç operandı olan operatörlerdir.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Dart farklı tipte işlemler yapan birçok operatör barındırmakta:</h2>
+                <ul class="contentUl">
+                    <li>Aritmetik Operatörler (Arithmetic Operators)</li>
+                    <li>Eşitlik ve İlişkisel Operatörler (Equality and Relational Operators)</li>
+                    <li>Tip testi Operatörleri (Type Test Operators)</li>
+                    <li>Atama Operatörleri (Assignment Operators)</li>
+                    <li>Mantıksal Operatörler (Logical Operators)</li>
+                    <li>Bitsel ve Kaydırma Operatörleri (Bitwise and Shift Operators)</li>
+                    <li>Koşullu İfade Operatörü (Conditional Operator)</li>
+                    <li>Basamaklı Gösterim Operatörü (Cascade Notation Operator)</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Aritmetik Operatörler</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operatör</th>
+                            <th>Anlamı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>+</strong></td>
+                            <td><strong>Toplama</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>&#8211;</strong></td>
+                            <td><strong>Çıkarma</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>-expr</strong>(ifade)</td>
+                            <td><strong>Unary minus, ifadenin işaretini ters çevirmek için kullanılır.</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong></td>
+                            <td><strong>Çarpma</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>/</strong></td>
+                            <td><strong>Bölme</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>~/</strong></td>
+                            <td><strong>Sonuç olarak tam sayı döndüren bölme işlemi</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>%</strong></td>
+                            <td><strong>Modulo, Mod işlemi</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Artırma ve Eksiltme Operatörleri</h2>
+                <p>Sayısal değer içeren bir değişkenin değerini bir birim artırmak ya da azaltmak için kullanılırlar.
+                    Tek operand alırlar. İki çeşit kullanımları vardır: Prefix(önek) ve Postfix(Sonek)</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operatör</th>
+                            <th></th>
+                            <th></th>
+                            <th>İşlem Sonrası</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Postfix++ (Sonek++)</strong></td>
+                            <td><strong>x = 2</strong></td>
+                            <td><strong>y = x++</strong></td>
+                            <td><strong>x = 3<br>y = 2</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Postfix- &#8211; (Sonek- -)</strong></td>
+                            <td><strong>x = 2</strong></td>
+                            <td><strong>y = x&#8211;</strong></td>
+                            <td><strong>x = 1<br>y = 2</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>++Prefix (++Önek)</strong></td>
+                            <td><strong>x = 2</strong></td>
+                            <td><strong>y = ++x</strong></td>
+                            <td><strong>x = 3<br>y = 3</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>&#8211; -Prefix (- -Önek)</strong></td>
+                            <td><strong>x = 2</strong></td>
+                            <td><strong>y = &#8211;x</strong></td>
+                            <td><strong>x = 2<br>y = 2</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Eşitlik ve İlişkisel Operatörler</h2>
+                <p>Sayısal değer içeren bir değişkenin değerini bir birim artırmak ya da azaltmak için kullanılırlar.
+                    Tek operand alırlar. <br> İki çeşit kullanımları vardır: Prefix(önek) ve Postfix(Sonek).</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operatör</th>
+                            <th>Anlamı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>==</strong></td>
+                            <td><strong>Eşittir</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>!=</strong></td>
+                            <td><strong>Eşit değildir</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>&gt;</strong></td>
+                            <td><strong>Büyüktür</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>&lt;</strong></td>
+                            <td><strong>Küçüktür</strong></td>
+                        </tr>
+                        <tr>
+                            <td>&gt;=</td>
+                            <td><strong>Büyük eşittir</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>&lt;=</strong></td>
+                            <td><strong>Küçük eşittir</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+                <span class="bold">== ve != operatörleri iki değerin eşit olup olmadığını test eder.</span>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span><span class="keyword">int</span> x = <span class="number">1</span>;</span><br><br>
+                        <span><span class="keyword">int</span> y = <span class="number">2</span>;</span><br><br>
+                        <span><span class="keyword">print</span>( x == y);<span class="comment">//Bu işlem false değer
+                                üretir.</span></span>
+                        <span><span class="keyword">print</span>( x != y);<span class="comment">////Bu işlem true değer
+                                üretir.</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Tip Testi Operatörleri</h2>
+                <p><span class="bold">as, is , is!</span>operatörleri çalışma zamanında türleri kontrol etmek için
+                    kullanılırlar.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operatör</th>
+                            <th>Anlamı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>as</strong></td>
+                            <td>Uygun türler arasındaki dönüşümü sağlar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>is</strong></td>
+                            <td>Bir nesnenin türünün operand ile verilen tür olup olmadığını kontrol eder.<br>Nesne
+                                belirtilen türe sahip ise true</td>
+                        </tr>
+                        <tr>
+                            <td><strong>is!</strong></td>
+                            <td>Nesne belirtilen türe sahip değilse true</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Atama Operatörleri</h2>
+                <p>= (Atama Operatörü) operatörü değer atamak için kullanılır. <br> <br>??= operatörü değer atanacak
+                    değişken null ise değer atar.</p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample"><span class="comment">// d null ise 10 değerini atar eğer null değilse d
+                            aynı kalır.</span><br><br> d ??= <span class="number">10</span>;</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bileşik Atama Operatörleri</h2>
+                <p>Bileşik atama operatörleri işlemi atama ile birleştirir.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>=</strong></td>
+                            <td><strong>-=</strong></td>
+                            <td><strong>/=</strong></td>
+                            <td><strong>%=</strong></td>
+                            <td><strong>&gt;&gt;=</strong></td>
+                            <td><strong>^=</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>+=</strong></td>
+                            <td><strong>*=</strong></td>
+                            <td><strong>~/=</strong></td>
+                            <td><strong>&lt;&lt;=</strong></td>
+                            <td><strong>&amp;=</strong></td>
+                            <td><strong>|=</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnekler:</h3>
+                    <p><strong>a = a + b </strong> yerine <strong> a +=b;</strong> <br>
+                        <strong>a = a / b; </strong> yerine <strong> a /= b;</strong> <br>
+                        <strong>a = a >> b; </strong> yerine <strong> a >>=b;</strong><br>
+                        <strong>a = a ^ b; </strong> yerine <strong> a^= b;</strong> <br>ifadeleri kullanılabilir.
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Mantıksal Operatörler</h2>
+                    <p>Mantıksal operatöler bool değerindeki operandları işleme sokar.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operatör</th>
+                                <th>Anlamı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>!expr</td>
+                                <td>bool ifadeyi tersine çevirir (true&#8217;yu false&#8217;a, false&#8217;u
+                                    true&#8217;ya çevirir)</td>
+                            </tr>
+                            <tr>
+                                <td>||</td>
+                                <td>Mantıksal VEYA (OR)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;&amp;</td>
+                                <td>Mantıksal VE (AND)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section">
+                    <h2>Bitsel ve Kaydırma Operatörleri</h2>
+                    <p>Dart dilinde sayıların bitleri değiştirilebilir. Bitsel ve kaydırma operatörleri genellikle tam
+                        sayılarla kullanılır. Bitsel operatörler sayıları oluşturan her bit üzerinde ayrı ayrı işlem
+                        yaparlar.</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Operatör</th>
+                                <th>İşlem</th>
+                            </tr>
+                            <tr>
+                                <td>Bitsel AND</td>
+                                <td>a &amp; b</td>
+                            </tr>
+                            <tr>
+                                <td>Bitsel OR</td>
+                                <td>a | b</td>
+                            </tr>
+                            <tr>
+                                <td>Bitsel XOR</td>
+                                <td>a ^ b</td>
+                            </tr>
+                            <tr>
+                                <td>Bitsel NOT</td>
+                                <td>~ a</td>
+                            </tr>
+                            <tr>
+                                <td>Sola kaydırma</td>
+                                <td>a ≪ b</td>
+                            </tr>
+                            <tr>
+                                <td>Sağa kaydırma</td>
+                                <td>a ≫ b</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section">
+                    <h2>Koşullu İfade Operatörleri</h2>
+                    <p>Dart dilinde koşullu ifadeler için iki operatör bulunmaktadır:</p>
+                    <div class="example">
+                        <h3 class="exampleTitle">Syntax</h3>
+                        <div class="insideExample">
+                            <span>koşul <span class="bold">?</span> ilk_ifade <span class="bold">:</span>
+                                ikinci_ifade</span><br>
+                        </div>
+                    </div>
+                    <p>Eğer koşul doğru ise ilk ifade döner yanlış ise ikinci ifade döner.</p>
+                    <div class="example">
+                        <h3 class="exampleTitle">Syntax</h3>
+                        <div class="insideExample">
+                            <a href="Null-aware operatorler.html"><span>ilk_ifade <span class="bold"> ??</span> ikinci_ifade</span></a>
+                        </div>
+                    </div>
+                    <p>ilk ifade null değise değerini döndürür, null ise ikinci ifade döner.</p>
+                </div>
+                <div class="section">
+                    <h2>Basamaklı Gösterim Operatörü (Cascade Notation Operator)</h2>
+                    <p>Cascade Operatörleri ( . . , ? . . ) aynı nesne üzerinde bir dizi işlem yapılmasına olanak sağlar.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="to-top">
+            başa dön
+        </a>
+        <footer></footer>
+    </main>
+
+</body>
+
+</html>

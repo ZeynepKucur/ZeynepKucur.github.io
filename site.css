@@ -1,0 +1,178 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: deepskyblue;
+  box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+}
+
+header {
+  width: 95%;
+  margin: auto;
+}
+
+.headerLinkActive {
+  border-top: 3px solid salmon;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15%;
+  justify-content: start;
+  height: 60px;
+}
+
+nav ul li {
+  order: 2;
+  display: flex;
+  flex-basis: 10%;
+  justify-content: center;
+  align-content: center;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "lato", sans-serif;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  align-self: center;
+}
+
+.flex1 {
+  order: 1;
+  border: none;
+  flex-basis: 1%;
+  display: flex;
+}
+
+nav ul li:hover {
+  border-top: 3px solid salmon;
+}
+
+nav ul li img {
+  height: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 220px;
+  border-left: 3px solid rgb(160 221 102);
+  box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+  background-color: rgb(246, 255, 237);
+  overflow: auto;
+  padding-bottom: 100px;
+  font-size: 17px;
+}
+
+.sidebar li {
+  padding: 5px 5px 5px 16px;
+  overflow: auto;
+}
+
+.sidebar li:hover {
+  background-color: rgb(219, 246, 255);
+}
+
+.sidebar li a {
+  color: black;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.sidebarActiveHover:hover {
+  background-color: deepskyblue !important;
+}
+
+#sidebarLinks a:is(:link, :active, :visited).active {
+  background-color: deepskyblue;
+  color: #ffffff !important;
+}
+
+.liactive {
+  color: white;
+  background-color: deepskyblue;
+}
+
+footer {
+  margin-left: 219px;
+  padding-left: 10px;
+  background-color: deepskyblue;
+  bottom: 0;
+  height: 50px;
+  margin-top: 5%;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 10%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #1f1f1f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom: 50px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    height: 100px;
+  }
+
+  header {
+    width: 90%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: #1f1f1f;
+
+  }
+
+  nav ul li {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}

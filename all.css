@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: deepskyblue;
+    box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+}
+.headerLinkActive {
+    border-top: 3px solid salmon;
+}
+.inner_header {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: deepskyblue;
+}
+.logo-container {
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin-left: 1%;
+    border: none;
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+.logo-container img {
+    vertical-align: middle;
+    padding: auto auto;
+    width: 50 px;
+    height: 50 px;
+}
+.navigation {
+    height: 100%;
+    margin-left: 20%;
+    background-color: deepskyblue;
+}
+.navigation li {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 70px;
+}
+.navigation li:first-child {
+    padding-left: 0;
+}
+.navigation li:last-child {
+    padding-right: 0px;
+}
+.navigation li a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: "lato", sans-serif;
+    line-height: 1;
+    letter-spacing: 1.5px;
+}
+.navigation li a:hover {
+    border-top: 3px solid salmon;
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 220px;
+    border-left: 3px solid rgb(160 221 102);
+    box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+    background-color: rgb(246, 255, 237);
+    overflow: auto;
+    padding-bottom: 100px;
+}
+.sidebar li {
+    padding: 5px 5px 5px 16px;
+    overflow: auto;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.sidebar li:hover {
+    background-color: rgb(219, 246, 255);
+}
+.sidebar li a {
+    color: black;
+}
+.sidebarActiveHover:hover {
+    background-color: deepskyblue !important;
+}
+#sidebarLinks a:is(:link, :active, :visited).active {
+    background-color: deepskyblue;
+    color: #ffffff !important;
+}
+.liactive {
+    color: white;
+    background-color: deepskyblue;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    margin-top: 70px;
+    margin-left: 230px;
+    padding: 10px 0px 10px 60px;
+    width: 60%;
+    font-size: 17px;
+    font-family: Georgia, serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+h1 {
+    font-family: Georgia, serif;
+    font-size: 33px;
+    font-weight: 800;
+    margin: 25px 0;
+}
+h2 {
+    font-family: Georgia, serif;
+    font-weight: 600;
+}
+p {
+    /* margin-top: 40px; */
+    color: rgba(0, 0, 0, .87);
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Georgia, serif;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    line-height: 1.7;
+}
+.pTogether {
+    margin-top: 0px;
+}
+.pTitle {
+    font-weight: bold;
+}
+.pTable {
+    font-size: 18px;
+}
+.contentUl a{
+    color: rgb(0, 80, 171);
+}
+.contentUl a:hover {
+    text-decoration: underline;
+}
+span{
+    line-height:1.5;
+}
+
+
+
+footer {
+    margin-left: 219px;
+    padding-left: 10px;
+    background-color: deepskyblue;
+    bottom: 0;
+    height: 50px;
+    margin-top: 5%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  .contentUl {
+    padding-left: 40px;
+  }
+  
+  .contentUl li {
+    list-style-type: disc;
+    line-height: 1.5;
+    padding-bottom: 5px;
+  }
+  .ulNumber{
+    padding-left: 40px;
+  }
+  .ulNumber li{
+    list-style-type: decimal;
+    line-height: 2;
+  }
+  table {
+    /* margin-top: 50px; */
+    background-color: rgb(241, 255, 226);
+    width: 100%;
+  }
+  
+  table td,table th {
+    padding: 10px 14px;
+    text-align: left;
+    font-family: Georgia, serif;
+  }
+  
+  th {
+    background-color: deepskyblue;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: rgb(232, 255, 209);
+  }
+  tr:nth-child(even) {
+    background-color:white;
+  }
+  
+  .example {
+    width: 100%;
+    background-color: rgb(236, 255, 218);
+    position: relative;
+    padding: 18px 20px 18px 20px;
+    position:inherit;
+    margin-top: 20px;
+  }
+  
+  .insideExample {
+    /* height: 80%; */
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    color: #000000;
+    font-family: Consolas, 'Source Code Pro', Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+  }
+  
+  .exampleTitle {
+    display: inline-block;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+  }
+  
+  .section {
+    margin-top: 35px;
+  }
+  
+  .to-top {
+    /* background: white; */
+    position: fixed;
+    bottom: 16px;
+    right: 10%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #1f1f1f;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  .to-top.active {
+    bottom: 50px;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .keyword {
+    color: #00a4db!important;
+  }
+  .string{
+    color:#fa557d;
+  }
+  .comment{
+    color:#708090;
+  }
+  .number{
+    color:#905;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .variable2{
+  color: #ff916e;
+  }
+  .definition{
+    width: 70%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: deepskyblue;
+    box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+  }
+  
+  .headerLinkActive {
+    border-top: 3px solid salmon;
+  }
+  
+  .inner_header {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: deepskyblue;
+  }
+  
+  .logo-container {
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin-left: 1%;
+    border: none;
+    background-color: deepskyblue;
+    cursor: pointer;
+  }
+  
+  .logo-container img {
+    margin: auto auto;
+    width: 50 px;
+    height: 50 px;
+  }
+  
+  .navigation {
+    height: 100%;
+    margin-left: 20%;
+    background-color: deepskyblue;
+  }
+  
+  .navigation li {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 70px;
+  }
+  
+  .navigation li:first-child {
+    padding-left: 0;
+  }
+  
+  .navigation li:last-child {
+    padding-right: 0px;
+  }
+  
+  .navigation li a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: "lato", sans-serif;
+    line-height: 1;
+    letter-spacing: 1.5px;
+  }
+  
+  .navigation li a:hover {
+    border-top: 3px solid salmon;
+  }
+  
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 220px;
+    border-left: 3px solid rgb(160 221 102);
+    box-shadow: 1px 2px 10px 0 rgb(160 221 102);
+    background-color: rgb(246, 255, 237);
+    overflow: auto;
+    padding-bottom: 100px;
+    font-size: 17px;
+  }
+  
+  .sidebar li {
+    padding: 5px 5px 5px 16px;
+    overflow: auto;
+  }
+  
+  .sidebar li:hover {
+    background-color: rgb(219, 246, 255);
+  }
+  
+  .sidebar li a {
+    color: black;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  .sidebarActiveHover:hover {
+    background-color: deepskyblue !important;
+  }
+  
+  #sidebarLinks a:is(:link, :active, :visited).active {
+    background-color: deepskyblue;
+    color: #ffffff !important;
+  }
+  
+  .liactive {
+    color: white;
+    background-color: deepskyblue;
+  }
+  
+  footer {
+    margin-left: 219px;
+    padding-left: 10px;
+    background-color: deepskyblue;
+    bottom: 0;
+    height: 50px;
+    margin-top: 5%;
+  }
+  
+  .to-top {
+    position: fixed;
+    bottom: 16px;
+    right: 10%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #1f1f1f;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  
+  .to-top.active {
+    bottom: 50px;
+    pointer-events: auto;
+    opacity: 1;
+  }

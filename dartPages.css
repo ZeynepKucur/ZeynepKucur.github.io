@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    margin-top: 70px;
+    margin-left: 230px;
+    padding: 10px 0px 10px 60px;
+    width: 60%;
+    font-size: 17px;
+}
+
+h3,h4,h5,h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: 800;
+    margin: 25px 0;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+p {
+    color: rgba(0, 0, 0, .87);
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    line-height: 1.7;
+}
+
+.pTogether {
+    margin-top: 0px;
+}
+
+.pTitle {
+    font-weight: bold;
+}
+
+.pTable {
+    font-size: 18px;
+}
+
+.contentUl a {
+    color: rgb(0, 80, 171);
+}
+
+.contentUl a:hover {
+    text-decoration: underline;
+}
+
+span {
+    line-height: 1.5;
+    font-family: Consolas, 'Source Code Pro', Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+}
+
+.contentUl {
+    padding-left: 40px;
+}
+
+.contentUl li {
+    list-style-type: disc;
+    line-height: 1.5;
+    padding-bottom: 5px;
+}
+
+.ulNumber {
+    padding-left: 40px;
+}
+
+.ulNumber li {
+    list-style-type: decimal;
+    line-height: 2;
+}
+
+table {
+    background-color: rgb(241, 255, 226);
+    width: 100%;
+}
+
+table td, table th {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+th {
+    background-color: deepskyblue;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(232, 255, 209);
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+.section {
+    margin-top: 35px;
+}
+
+.example {
+    width: 100%;
+    background-color: rgb(236, 255, 218);
+    position: relative;
+    padding: 18px 20px 18px 20px;
+    position: inherit;
+    margin-top: 20px;
+}
+
+.insideExample {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    color: #000000;
+    font-size: 1em;
+    /* text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal; */
+}
+
+.exampleTitle {
+    margin-bottom: 10px;
+}
+
+.keyword {
+    color: #00a4db !important;
+}
+
+.string {
+    color: #fa557d;
+}
+
+.comment {
+    color: #708090;
+}
+
+.number {
+    color: #905;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.variable2 {
+    color: #ff916e;
+}
+
+.definition {
+    max-width: 70%;
+    height: auto;
+}
