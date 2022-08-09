@@ -73,8 +73,6 @@ nav ul li a {
   border-top: 3px solid salmon;
 } */
 
-
-
 footer {
   margin-left: 219px;
   padding-left: 10px;
@@ -128,8 +126,15 @@ footer {
     justify-content: center;
   }
 
-  .sidebar {
-    display: none;
+  footer{
+    background-color: deepskyblue;
+    margin-top: 5em;
+    bottom: 0;
+    margin-left: 0px;
+    padding-left: 0px;
   }
 
+  .to-top{
+    display: none;
+  }
 }
