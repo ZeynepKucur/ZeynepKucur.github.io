@@ -7,6 +7,7 @@
     <title>Flutter</title>
     <link rel="stylesheet" href="site.css">
     <script defer src="Js.js"></script>
+    <link rel="stylesheet" href="dartPages.css">
 </head>
 <body>
     <div class="header">
@@ -14,17 +15,250 @@
             <nav>
                 <ul>
                     <li class="flex1">
-                        <a href="homepage.html">
+                        <a href="index.html">
                             <img class="responsive" src="img/webiconsmall8.png"
                                 alt="The logo of dartveflutterogrenelim">
                         </a>
                     </li>
-                    <li><a href="homepage.html">ANASAYFA</a></li>
+                    <li><a href="index.html">ANASAYFA</a></li>
                     <li><a href="Dart Introduction.html">DART</a></li>
-                    <li><a href="Flutter.html">FLUTTER</a></li>
                 </ul>
             </nav>
         </header>
     </div>
+    <main>
+        <div class="mainContainer">
+            <h1>Dart Fonksiyonlar, Parametreler</h1>
+            <p>Dart nesne yönelimli bir programlama dilidir ve fonksiyonlar da birer nesnedir. Fonksiyon,spesifik bir
+                görevi yerine getiren kod bloğudur. Fonskiyonlar sınıfların içinde olduğu zaman metod olarak
+                adlandırılırlar.
+            </p>
+            <div class="section">
+                <h2>Fonksiyon Tipleri:</h2> <br>
+                <ul class="contentUl">
+                    <li>Yerleşik fonksiyonlar</li>
+                    <li>Kullanıcı-tanımlı fonksiyonlar</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Dart’ta Yerleşik Fonksiyonlar</h2>
+                <p>Dart tarafından önceden tanımlanmış dil ile birlikte gelen Dart kütüphanelerinin bir parçası olan
+                    fonksiyonlardır. Örneğin: print(), readLineSync() yerleşik fonksiyonlardır. Dart dilinde yerleşik
+                    fonksiyonlarla dolu birçok kütüphane vardır.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">main</span>() {<br>
+                            &emsp; <span class="keyword">String</span> yaz = <span class="string">'Dart dilinde
+                                fonksiyonlar'</span>;<br>
+                            &emsp; print(yaz);
+                            <br>}
+                        </span>
+                    </div>
+                </div>
+                <p>Yukarıdaki kodda, <strong>print</strong> yazdırma görevini yerine getiren bir metoddur.
+                    <strong>yaz</strong> değişkeni metoda geçirilen
+                    argümandır, ‘Dart dilinde fonksiyonlar’ yazdırılan değerdir.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Dart’ta Kullanıcı Tanımlı fonksiyonlar</h2>
+                <p>Kullanıcı tanımlı fonksiyonlar programcılar tarafından yazılan fonksiyonlardır. Programda istenilen
+                    bir görevi yerine getirmesi için fonksiyon yazılabilir. Yazılan bu fonksiyon Kullanıcı tanımlı
+                    (user-defined) fonksiyon olur.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Dart dilinde bir fonksiyonun yapısı:</h2> <br>
+                <img
+                sizes="(max-width: 748px) 100vw, 748px"
+                srcset="
+                img/webiconsmall8.png 200w,
+                Fonskiyon_qerqe5_c_scale,w_748.webp 748w"
+                src="Fonskiyon_qerqe5_c_scale,w_748.webp"
+                alt=""> <br> <br>
+                <p>
+                    <strong>Geridönüş tipi: </strong>Fonksiyonun üreteceği output’un türünü belirtir.Herhangi bir output
+                    üretmeyecekse
+                    geridönüş tipi olarak <strong>void</strong> kullanılabilir.
+                </p>
+                <p class="pTogether">
+                    <strong>Fonksiyon adı: </strong> Fonksiyona herhangi bir isim verilebilir, isim verirken
+                    lowerCamelCase
+                    adlandırma
+                    kuralı takip edilmelidir. Fonksiyon bu isimle çağırılır.
+                </p>
+                <p class="pTogether">
+                    <strong>Parametre: </strong> Fonksiyona girdi olarak tanımlanan isim ve veri tipidir. Fonksiyonlar
+                    parametre almak
+                    zorunda değildir, parametresiz fonksiyon da oluşturulabilir.
+                </p>
+                <p class="pTogether">
+                    <strong>Return value: </strong>Fonksiyonun çıkış değeridir(output). Return value ile geridönüş tipi
+                    aynı
+                    tipte
+                    olmalıdır.
+                </p>
+                <p>Return value, fonksiyon ismi ve parametreler,<strong> function signature</strong> olarak
+                    adlandırılır.Süslü parantezler
+                    arasındaki kod,<strong> fonksiyon gövdesi </strong>olarak adlandırılır.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Parametre ile Argüman arasındaki fark nedir?</h2>
+                <p>Parametre, fonksiyon oluşturulurken fonksiyona girdi olarak tanımlanan isim ve veri tipidir. Argüman
+                    ise fonksiyon çağrılırken fonksiyona geçirilen değerdir.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Birden çok parametre kullanma</h2>
+                <p>Bir Dart fonksiyonunda istenilen sayıda parametre kullanılabilir. Birden fazla parametre varsa virgül
+                    ile ayrılması
+                    gerekir.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> sehirUlke(<span class="keyword">String </span>sehir, <span
+                                class="keyword">String </span>ulke){<br>
+                            &emsp; print(<span class="string">'Şehir:</span>$sehir <span class="string">,
+                                Ülke:</span>$ulke<span class="string">'</span>);
+                            <br>}
+                        </span>
+                    </div>
+                </div>
+                <p>Yukarıdaki örnekteki gibi parametrelere, argümanları parametrelerin tanımlandığı sırada vermek
+                    gerektiği için <strong>pozisyonel parametreler (positional parameters)</strong> denir.
+                </p>
+                <p>
+                    Null safety ile birlikte değişkenler null olabilecekleri belirtilmedikleri sürece null olamazlar.Bir
+                    değişkeni nullable yapabilmek için o değişkenin tipinden sonra soru işareti (?) koymak gerekir.
+                    Örneğin, String? tipindeki bir değişken string de olabilir null da olabilir.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Parametreleri Opsiyonel Yapma</h2>
+                <p>Yukarıdaki örnekteki fonksiyon 2 argüman alıyor peki ya fonksiyon çağrılırken hiç argüman verilmeden
+                    sehirUlke( ) şeklinde çağrılırsa ne olur? Derleyici, sehirUlke( ) fonksiyonun 2 argüman alması
+                    gerektiği için error verir. Peki bu fonksiyona hiç argüman verilmediğinde error yerine
+                    “Belirtilmedi” çıktısı alabilseydik güzel olmaz mıydı? Dart dilinde bu parametreleri opsiyonel
+                    yaparak mümkün.<br><strong>Dart dilinde parametreleri opsiyonel yapmanın iki yolu
+                        vardır:</strong><i><strong> Optional Positional Parameters, Optional Named
+                            Parameters</strong></i>
+                </p>
+            </div>
+            <div class="section">
+                <h2>Optional Positional Parameters</h2>
+                <p>Bir parametrenin isteğe bağlı konumsal parametre (optional positional parameter) olduğunu belirtmek
+                    için parametre köşeli parantezler içine alınmalı ve veri tipinin yanına soru işareti getirilmeli:
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu oluşturma</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> sehirUlkeOpsiyonel(<span class="keyword">String
+                            </span>sehir, <span class="keyword">[String? </span>ulke<span class="keyword">]</span>){<br>
+                            &emsp; <span class="keyword">if </span>(ulke == <span class="keyword">null</span>) <br>
+                            &emsp; &emsp; print (<span class="string">'Şehir:</span>$sehir<span
+                                class="string">'</span>);<br>
+                            &emsp; <span class="keyword">else</span><br>
+                            &emsp; &emsp; print (<span class="string">'Şehir:</span>$sehir<span class="string">,
+                            </span><span class="string">Ülke:</span>$ulke<span class="string">'</span>);
+                            <br>}
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu çağırma</h3>
+                    <div class="insideExample">
+                        <span>
+                            sehirUlkeOpsiyonel(<span class="string">'İstanbul'</span>); <span class="comment">//Çıktı:
+                                "Şehir: İstanbul"</span><br>
+                            sehirUlkeOpsiyonel(<span class="string">'İstanbul'</span>,<span
+                                class="string">'Türkiye'</span>); <span class="comment">//Çıktı:
+                                "Şehir:İstanbul , Ülke:Türkiye"</span><br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Optional Named Parameters</h2>
+                <p>İsim verilmiş parametreler <strong>“required”</strong> olarak belirtilmedikleri sürece opsiyoneldir.
+                    <strong>required</strong> olarak
+                    belirtilen parametler boş bırakılmaz, değer girilmesi gerekir. Optional Positional parametrelerden
+                    farklı olarak Named Parametreli fonksiyonlar çağrılırken değer ile birlikte parametrenin adı da
+                    belirtilmelidir.
+                    Optional named parametreler süslü parantez içinde aralarına virgül konularak belirtilirler.Eğer bir
+                    parametre opsiyonelse ve null olmamalıysa default bir değeri olmalıdır.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu oluşturma</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> sehirBolgeUlke(<span class="keyword">String
+                            </span>sehir, <span class="keyword">{String? </span>bolge<span class="keyword">,String?
+                            </span>ulke<span class="keyword"></span>}</span>){<br>
+                        &emsp; <span class="keyword">if</span>(bolge == <span class="keyword">null</span> && ulke ==
+                        <span class="keyword">null</span>) <br>
+                        &emsp; &emsp; print (<span class="string">'Şehir:</span> $sehir<span
+                            class="string">'</span>);<br>
+                        &emsp; <span class="keyword">else if</span>(bolge != <span class="keyword">null</span> && ulke
+                        ==
+                        <span class="keyword">null</span>)<br>
+                        &emsp; &emsp; print (<span class="string">'Şehir:</span> $sehir<span
+                            class="string">,</span><span class="string"> Bölge:</span> $bolge<span
+                            class="string">'</span>);<br>
+                        &emsp; <span class="keyword">else if</span>(bolge != <span class="keyword">null</span> && ulke
+                        !=
+                        <span class="keyword">null</span>)<br>
+                        &emsp; &emsp; print (<span class="string">'Şehir:</span> $sehir<span class="string">,
+                        </span><span class="string">Bölge:</span> $bolge<span class="string">, Ülke:</span> $ulke<span
+                            class="string">'</span>);
+                        <br>}
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu çağırma</h3>
+                    <div class="insideExample">
+                        <span>
+                            sehirBolgeUlke(<span class="string">'İstanbul'</span>, bolge:<span
+                                class="string">'Marmara'</span>, ulke:<span class="string">'Türkiye'</span>);
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Default parametre değerleri</h2>
+                <p>Optional positional ve optional named parametrelere default değerler = ile verilebilir. Hiçbir
+                    default değer verilmediğinde, default değer null’dur.
+                </p>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu oluşturma</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">void</span> yaz ({<span class="string">String</span> nereden = <span
+                                class="string">'Dünyadan'</span>, <span class="keyword">String?</span> nereye, <span
+                                class="string">String</span> olay = <span class="string">'yolculuk'</span>}) <br>{ <br>
+                            &emsp; print(<span class="string">'</span>$nereden $nereye $olay <span
+                                class="string">başarıyla gerçekleşti.'</span>);<br> }
+                        </span>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3 class="exampleTitle">Örnek: Fonksiyonu çağırma</h3>
+                    <div class="insideExample">
+                        <span>
+                            <span class="keyword">yaz</span> (nereye: <span class="string">"Merkür'e"</span>);<br>
+                            <span class="comment">//Çıktı: "Dünyadan Merkür'e yolculuk başarıyla gerçekleşti."</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
