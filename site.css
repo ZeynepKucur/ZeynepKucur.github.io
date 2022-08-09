@@ -73,50 +73,7 @@ nav ul li a {
   border-top: 3px solid salmon;
 } */
 
-nav ul li img {
-  height: 50px;
-}
 
-.sidebar {
-  position: fixed;
-  height: 100%;
-  width: 220px;
-  border-left: 3px solid rgb(160 221 102);
-  box-shadow: 1px 2px 10px 0 rgb(160 221 102);
-  background-color: rgb(246, 255, 237);
-  overflow: auto;
-  padding-bottom: 100px;
-  font-size: 17px;
-}
-
-.sidebar li {
-  padding: 7px 7px 7px 16px;
-  margin: 5px;
-  overflow: auto;
-}
-
-.sidebar li:hover {
-  background-color: rgb(219, 246, 255);
-}
-
-.sidebar li a {
-  color: black;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-.sidebarActiveHover:hover {
-  background-color: deepskyblue !important;
-}
-
-#sidebarLinks a:is(:link, :active, :visited).active {
-  background-color: deepskyblue;
-  color: #ffffff !important;
-}
-
-.liactive {
-  color: white;
-  background-color: deepskyblue;
-}
 
 footer {
   margin-left: 219px;
