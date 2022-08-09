@@ -59,6 +59,7 @@ nav ul li a {
   letter-spacing: 1.5px;
   text-decoration: none;
   align-self: center;
+  /* text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.3); */
 }
 
 .flex1 {
@@ -68,9 +69,9 @@ nav ul li a {
   display: flex;
 }
 
-nav ul li:hover {
+/* nav ul li:hover {
   border-top: 3px solid salmon;
-}
+} */
 
 nav ul li img {
   height: 50px;
@@ -174,16 +175,4 @@ footer {
     display: none;
   }
 
-  .mainContainer{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-    margin-top: 70px;
-    margin-left: 230px;
-    padding: 10px 0px 10px 60px;
-    width: 60%;
-    font-size: 17px;
-    background-color: #1f1f1f;
-  }
 }

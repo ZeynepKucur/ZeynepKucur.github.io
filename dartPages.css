@@ -170,6 +170,40 @@ tr:nth-child(even) {
     height: auto;
 }
 
-@media only screen and (max-width: 600px){
-    
-}
+@media screen and (max-width: 600px) {
+    .header {
+      width: 100%;
+    }
+
+    header {
+      width: 90%;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    nav ul li {
+      order: 2;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .mainContainer{
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      margin-top: 70px;
+      margin-left: 0px;
+      width: 100%;
+      font-size: 17px;
+    }
+  }
