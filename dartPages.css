@@ -42,7 +42,7 @@ html {
 }
 
 .sidebar li {
-    padding: 7px 7px 7px 16px;
+    margin: 0.5em  0  0.5em  0;
     overflow: auto;
 }
 
@@ -53,7 +53,6 @@ html {
 .sidebar li a {
     display: block;
     color: black;
-    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .sidebarActiveHover:hover {
