@@ -29,7 +29,6 @@ html {
     font-size: 17px;
 }
 
-
 .sidebar {
     position: fixed;
     height: 100vh;
@@ -52,6 +51,7 @@ html {
 }
 
 .sidebar li a {
+    display: block;
     color: black;
     font-family: "Segoe UI", Arial, sans-serif;
 }
