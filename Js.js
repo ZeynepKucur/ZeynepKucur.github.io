@@ -2,12 +2,12 @@
 const activePage = window.location.pathname;
 console.log(activePage);
 
-// const headerLinks = document.querySelectorAll('nav ul li a').
-//   forEach(link => {
-//     if (link.href.includes(`${activePage}`)) {
-//       link.parentElement.classList.add('headerLinkActive');
-//     }
-//   })
+const headerLinks = document.querySelectorAll('nav ul li a').
+  forEach(link => {
+    if (link.href.includes(`${activePage}`)) {
+      link.parentElement.classList.add('headerLinkActive');
+    }
+  })
 
 const sidebarLinks = document.querySelectorAll(".sidebar a").
   forEach(link => {
@@ -29,16 +29,20 @@ window.addEventListener("scroll", () => {
   }
 })
 
-const hamburger = document.getElementById('hamburger')
-const sidebar = document.getElementById('sidebarLinks')
-const overlay = document.getElementById('overlay')
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebarLinks');
+const overlay = document.getElementById('overlay');
 
-let menuOpen = false
+let menuOpen = false;
+
+if(menuOpen == false){
+  sidebar.style.width = '0px'
+}
 
 function openMenu() {
   menuOpen = true
   overlay.style.display = 'block'
-  sidebar.style.width = '250px'
+  sidebar.style.width = '60%'
 }
 
 function closeMenu() {
