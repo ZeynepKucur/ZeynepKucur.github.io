@@ -22,16 +22,11 @@
         <header id="header">
             <nav>
                 <ul>
-                    <li>      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        id="hamburger"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                      </svg></li>
+                    <li> <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                            id="hamburger">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                        </svg></li>
                     <li class="flex1">
                         <a href="index.html">
                             <img class="responsive" src="img/webiconsmall8.png"
@@ -129,39 +124,51 @@
                 <div class="example">
                     <h3 class="exampleTitle">Örnek</h3>
                     <div class="insideExample">
-<span><span class="keyword">String</span> s1 = <span class="string">'Dart öğreniyorum'</span>;</span><br><br>
-<span><span class="keyword">String</span> s2 = <span class="string">"Çift tırnakla da string  oluşturulabiliyor"</span>;</span>
+                        <div class="divSpan"><span class="keyword">String</span> s1 = <span class="string">'Dart
+                                öğreniyorum'</span>;</span><br><br>
+                            <span><span class="keyword">String</span> s2 = <span class="string">"Çift tırnakla da string
+                                    oluşturulabiliyor"</span>;
+                        </div>
                     </div>
                 </div>
                 <div class="example">
                     <h3 class="exampleTitle">Örnek</h3>
                     <div class="insideExample">
-<span><span class="keyword">String</span> s3 = <span class="string">"Dart'ın özelliği"</span>;</span><br><br>
-<span><span class="keyword">String</span> s4 = <span class="string">'Dart\'ın özelliği'</span>;</span>
+                        <div class="divSpan"><span class="keyword">String</span> s3 = <span class="string">"Dart'ın
+                                özelliği"</span>;</span><br><br>
+                            <span><span class="keyword">String</span> s4 = <span class="string">'Dart\'ın
+                                    özelliği'</span>;
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="section">
                 <h2>Booleans</h2>
-                <p>Dart dilinde <span class="bold">bool</span> anahtar kelimesi Boolean değerlerini temsil etmek için kullanılır. 
+                <p>Dart dilinde <span class="bold">bool</span> anahtar kelimesi Boolean değerlerini temsil etmek için
+                    kullanılır.
                     Sadece <span class="bold">true</span> ve <span class="bold">false</span> bool türündedir.</p>
             </div>
             <div class="section">
                 <h2>Lists:</h2>
-                <p>Nesne koleksiyonunu temsil etmek için list veri tipi kullanılır.Diğer dillerdeki array veri tipine benzer.
+                <p>Nesne koleksiyonunu temsil etmek için list veri tipi kullanılır.Diğer dillerdeki array veri tipine
+                    benzer.
                     Dart dilinde array bulunmasa da list array’in sağlayabildiği hemen hemen her şeyi sağlar.
-                    Lists sıralı koleksiyon nesneleridir yani her elemanın index ile erişilebilen belirli bir pozisyonu vardır.</p>
+                    Lists sıralı koleksiyon nesneleridir yani her elemanın index ile erişilebilen belirli bir pozisyonu
+                    vardır.</p>
                 <div class="example">
                     <h3 class="exampleTitle">Dart dilinde list tanımlama örnekleri:</h3>
                     <div class="insideExample">
-<span><span class="keyword">var</span> list1 = [<span class="number">1</span> ,<span class="number">2</span> ,<span class="number">3</span>]</span>
+                        <div class="divSpan"><span class="keyword">var</span> list1 = [<span class="number">1</span>
+                            ,<span class="number">2</span> ,<span class="number">3</span>]</div>
                     </div>
                 </div>
-                <p>var ile tanımlanmış yukarıdaki kodda Dart type inference ( tür çıkarımı ) özelliği ile list1’in <span class="bold">List < int ></span> (int
+                <p>var ile tanımlanmış yukarıdaki kodda Dart type inference ( tür çıkarımı ) özelliği ile list1’in <span
+                        class="bold">List &lt;int&gt; (int
                         tipinde elemanlı List) olduğu çıkarımını yapar.</p>
                 <div class="example">
                     <div class="insideExample">
-<span><span class="keyword">var</span> list2 = [<span class="string">'Dart'</span> ,<span class="string">'programlama dili'</span>]</span>
+                        <div class="divSpan"><span class="keyword">var</span> list2 = [<span
+                                class="string">'Dart'</span> ,<span class="string">'programlama dili'</span>]</div>
                     </div>
                 </div>
                 <br> <br>
@@ -170,7 +177,8 @@
                 <div class="example">
                     <h3 class="exampleTitle">Örnek</h3>
                     <div class="insideExample">
-<span><span class="keyword">var</span> createList  = <span class="variable2">List</span>();</span>
+                        <div class="divSpan"><span class="keyword">var</span> createList = <span
+                                class="variable2">List</span>();</div>
                     </div>
                 </div>
                 <p>Yukarıdaki şekilde List oluşturulduğunda boş bir List elde edilir.
@@ -180,43 +188,63 @@
                 <div class="example">
                     <h3 class="exampleTitle">Syntax</h3>
                     <div class="insideExample">
-<span class="keyword">var </span>listAdı = List&lt;veriTipi&gt;();</span></span>
+                        <div class="divSpan"><span class="keyword">var </span>listAdı =
+                            List&lt;veriTipi&gt;();</span></span></div>
                     </div>
                 </div>
-                <p>List veritipi de array veritipi gibi sıfır tabanlı indeksleme sistemini kullanılır. sıfır ilk değerin indeksidir,
+                <p>List veritipi de array veritipi gibi sıfır tabanlı indeksleme sistemini kullanılır. sıfır ilk değerin
+                    indeksidir,
                     list.length-1 son değerin indeksidir.</p>
 
-                    <div class="example">
-                        <h3 class="exampleTitle"></h3>
-                        <div class="insideExample">
-<span><span class="keyword">var</span> list3 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span>
-<br><br>
-<span class="keyword">print</span><span>(list3.lengh);</span><span class="comment">//.length listenin uzunluğunu hesaplar.Sonuç 5 olarak çıkar.</span>
-<br><br>
-<span class="keyword">print</span><span>(list3[3]);</span><span class="comment">//3.indeksin değeri olan 4'ü yazdırır.</span>                        
+                <div class="example">
+                    <h3 class="exampleTitle"></h3>
+                    <div class="insideExample">
+                        <div class="divSpan">
+                            <span><span class="keyword">var</span> list3 = [<span class="number">1</span>,<span
+                                    class="number">2</span>,<span class="number">3</span>,<span
+                                    class="number">4</span>,<span class="number">5</span>]</span>
+                            <br><br>
+                            <span class="keyword">print</span><span>(list3.lengh);</span><span class="comment">//.length
+                                listenin uzunluğunu hesaplar.Sonuç 5 olarak çıkar.</span>
+                            <br><br>
+                            <span class="keyword">print</span><span>
                         </div>
+                        (list3[3]);</span><span class="comment">//3.indeksin
+                            değeri olan 4'ü yazdırır.</span>
                     </div>
-                    <div class="section">
-<p>Dart 2.3 ile versiyonu <span class="bold">spread operator (…) ve the null-aware spread operator (…?)</span>‘lerini tanıttı.</p>
+                </div>
+                <div class="section">
+                    <p>Dart 2.3 ile versiyonu <span class="bold">spread operator (…) ve the null-aware spread operator
+                            (…?)</span>‘lerini tanıttı.</p>
 
-<p><span class="bold">spread operator(…)</span> ile bir listenin bütün değerlerini başka bir listeye yerleştirebilirsiniz.</p>
-<div class="example">
-    <h3>Örnek</h3>
-    <div class="insideExample">
-<span><span class="keyword"> list4 </span>= [<span class="number">10</span>, <span class="number">20</span>];</span><br><br>
-<span><span class="keyword"> list5 </span>= [...list4,<span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>];<span class="comment">//list4, list5'e dahil edilir.</span> </span>
-    </div>
-</div>
-<p> <span class="bold">the null-aware spread operator (…?)</span>operatörün sağındaki ifadenin boş olup olmadığını denetler eğer boşsa o ifadeyi katmaz.</p>
-                        <div class="example">
-                            <h3 class="exampleTitle">Örnek</h3>
-                            <div class="insideExample">
-<span><span class="keyword">var</span>list6;</span><br><br>
-<span><span class="keyword">var</span>list7; = [<span class="number">100</span>...?list6];</span>
+                    <p><span class="bold">spread operator(…)</span> ile bir listenin bütün değerlerini başka bir listeye
+                        yerleştirebilirsiniz.</p>
+                    <div class="example">
+                        <h3>Örnek</h3>
+                        <div class="insideExample">
+                            <div class="divSpan">
+                                <span><span class="keyword"> list4 </span>= [<span class="number">10</span>, <span
+                                        class="number">20</span>];</span><br><br>
+                                <span><span class="keyword"> list5 </span>= [...list4,<span class="number">30</span>, <span
+                                        class="number">40</span>, <span class="number">50</span>];<span class="comment">//list4, list5'e dahil
+                                        edilir.</span> </span>
                             </div>
                         </div>
-                        <p>list6’ya değer atanmadığı için null’dur. <span class="bold">…?</span> operatörü kullanılarak null ifade eklemeye çalışmaktan kaynaklanan hatadan kaçınılabilir.</p>
                     </div>
+                    <p> <span class="bold">the null-aware spread operator (…?)</span>operatörün sağındaki ifadenin boş
+                        olup olmadığını denetler eğer boşsa o ifadeyi katmaz.</p>
+                    <div class="example">
+                        <h3 class="exampleTitle">Örnek</h3>
+                        <div class="insideExample">
+                            <div class="divSpan">
+                                <span><span class="keyword">var</span>list6;</span><br><br>
+                                <span><span class="keyword">var</span>list7; = [<span class="number">100</span>...?list6];</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>list6’ya değer atanmadığı için null’dur. <span class="bold">…?</span> operatörü kullanılarak null
+                        ifade eklemeye çalışmaktan kaynaklanan hatadan kaçınılabilir.</p>
+                </div>
             </div>
             <div class="section">
                 <h2>Sets:</h2>
@@ -225,41 +253,53 @@
                 <div class="example">
                     <h3 class="exampleTitle">Örnek</h3>
                     <div class="insideExample">
-<span><span class="variable2">Set</span> &ltdeğişken_türü&gt değişken_adı = {};</span>
-<br><br>
-<span><span class="keyword">var</span> değişken_adı = &ltdeğişken_türü&gt{};</span>
+                        <div class="divSpan">
+                            <span><span class="variable2">Set</span> &ltdeğişken_türü&gt değişken_adı = {};</span>
+                            <br><br>
+                            <span><span class="keyword">var</span> değişken_adı = &ltdeğişken_türü&gt{};</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="section">
                 <h2>Maps:</h2>
-                <p>Map(harita), anahtarları ve değerleri ilişkirendiren bir nesnedir. Hem anahtarlar hem de değerler herhangi bir nesne türü olabilir. Anahtarların benzersiz olması gerekir.</p>
+                <p>Map(harita), anahtarları ve değerleri ilişkirendiren bir nesnedir. Hem anahtarlar hem de değerler
+                    herhangi bir nesne türü olabilir. Anahtarların benzersiz olması gerekir.</p>
                 <div class="example">
                     <h3 class="exampleTitle">Örnek</h3>
-                    <div class="insideExample"><span><span class="keyword">var </span>sayılar={
-<br><br><span class="comment">//anahtar: değer</span>
-<br><br><span class="number">1</span>: <span class="string">'bir'</span><br><br>
-<span class="number">2</span>: <span class="string">'iki'</span><br><br>
-<span class="number">3</span>: <span class="string">'üç'</span>
-};</span></div>
+                    <div class="insideExample">
+                        <div class="divSpan">
+                            <span>
+                                <span class="keyword">var </span>sayılar={
+                                <br><br><span class="comment">//anahtar: değer</span>
+                                <br><br><span class="number">1</span>: <span class="string">'bir'</span><br><br>
+                                <span class="number">2</span>: <span class="string">'iki'</span><br><br>
+                                <span class="number">3</span>: <span class="string">'üç'</span>
+                                };
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section">
                 <h2>Runes:</h2>
-                <p>Stringler bir dizi karakterden oluşur. Dart stringleri Unicode UTF-16 kod birimleri dizisi olarak temsil eder.
-                    Unicode dünyadaki tüm yazım sistemlerinde kullanılan her harf, rakam ve sembol için benzersiz bir sayısal değer
+                <p>Stringler bir dizi karakterden oluşur. Dart stringleri Unicode UTF-16 kod birimleri dizisi olarak
+                    temsil eder.
+                    Unicode dünyadaki tüm yazım sistemlerinde kullanılan her harf, rakam ve sembol için benzersiz bir
+                    sayısal değer
                     tanımlayan bir biçimdir. Rune bir Unicode kod noktasını temsil eden tamsayıdır.</p>
             </div>
             <div class="section">
                 <h2>Symbols:</h2>
-                <p>Semboller, Dart programında tanımlanmış olan bir operatörü ya da identifier’ı (tanımlayıcı) temsil ederler.Değiştirilemeyen ve derleme süresi boyunca sabit kalan dinamik string adlardır.</p>
+                <p>Semboller, Dart programında tanımlanmış olan bir operatörü ya da identifier’ı (tanımlayıcı) temsil
+                    ederler.Değiştirilemeyen ve derleme süresi boyunca sabit kalan dinamik string adlardır.</p>
             </div>
         </div>
         <a href="#" class="to-top">
             başa dön
         </a>
     </main>
-        <footer></footer>
+    <footer></footer>
 </body>
 
 </html>

@@ -189,7 +189,9 @@ tr:nth-child(even) {
 .exampleTitle {
     margin-bottom: 10px;
 }
-
+.divSpan{
+    padding: 0.5em;
+}
 .keyword {
     color: #00a4db !important;
 }
@@ -259,7 +261,5 @@ tr:nth-child(even) {
         width: 100%;
         font-size: 16px;
     }
-    span{
-        font-size: 15px;
-    }
+
 }
