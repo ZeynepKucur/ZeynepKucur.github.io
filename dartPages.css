@@ -23,9 +23,7 @@ html {
     width: 60%;
     font-size: 17px;
 }
-nav ul li img {
-    height: 50px;
-  }
+
   
   .sidebar {
     position: fixed;
@@ -41,7 +39,6 @@ nav ul li img {
   
   .sidebar li {
     padding: 7px 7px 7px 16px;
-    margin: 5px;
     overflow: auto;
   }
   

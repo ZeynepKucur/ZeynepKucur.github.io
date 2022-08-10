@@ -25,7 +25,7 @@ html {
 }
 
 header {
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 
@@ -37,17 +37,13 @@ nav ul {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
-  gap: 15%;
   justify-content: start;
   height: 60px;
 }
 
 nav ul li {
-  order: 2;
   display: flex;
-  flex-basis: 10%;
   justify-content: center;
-  align-content: center;
 }
 
 nav ul li a {
@@ -61,12 +57,27 @@ nav ul li a {
   align-self: center;
   /* text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.3); */
 }
+nav ul li img {
+  height: 50px;
+}
+#hamburger {
+  fill: white;
+  height: 38px;
+  width: 38px;
+  margin: 10px;
+  display: none;
+  cursor: pointer;
+}
 
 .flex1 {
   order: 1;
   border: none;
-  flex-basis: 1%;
-  display: flex;
+  margin-left: 2em;
+}
+
+.flex2 {
+  flex-basis: 10%;
+  order: 2;
 }
 
 /* nav ul li:hover {
@@ -109,24 +120,36 @@ footer {
   }
 
   header {
-    width: 90%;
+    width: 100%;
   }
 
   nav ul {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
   }
 
   nav ul li {
-    order: 2;
+    /* order: 2; */
     display: flex;
     justify-content: center;
   }
 
-  footer{
+  #hamburger {
+    fill: white;
+    height: 38px;
+    width: 38px;
+    margin: 10px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .flex1 {
+    order: 4;
+  }
+
+  footer {
     background-color: deepskyblue;
     margin-top: 5em;
     bottom: 0;
@@ -134,7 +157,7 @@ footer {
     padding-left: 0px;
   }
 
-  .to-top{
+  .to-top {
     display: none;
   }
 }
