@@ -35,8 +35,11 @@ const overlay = document.getElementById('overlay');
 
 let menuOpen = false;
 
-if(menuOpen == false){
+var mobileWidth = window.matchMedia("(max-width: 600px)");
+
+if (mobileWidth.matches) {
   sidebar.style.width = '0px'
+
 }
 
 function openMenu() {
