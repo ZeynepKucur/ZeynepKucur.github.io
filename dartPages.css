@@ -238,6 +238,11 @@ tr:nth-child(even) {
         transition: width 0.1s ease;
     }
 
+    .sidebar li {
+        padding: 10px 10px 10px 16px;
+        overflow: auto;
+    }
+
     #overlay {
         width: 100vw;
         height: 100vh;
