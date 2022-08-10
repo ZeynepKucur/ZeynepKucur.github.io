@@ -42,7 +42,7 @@ html {
 }
 
 .sidebar li {
-    margin: 0.5em  0  0.5em  0;
+    padding: 10px 7px 10px 16px;
     overflow: auto;
 }
 
@@ -237,11 +237,6 @@ tr:nth-child(even) {
         transition: width 0.1s ease;
     }
 
-    .sidebar li {
-        padding: 10px 10px 10px 16px;
-        overflow: auto;
-    }
-
     #overlay {
         width: 100vw;
         height: 100vh;
@@ -259,7 +254,7 @@ tr:nth-child(even) {
         background-color: white;
         margin-top: 70px;
         margin-left: 0px;
-        padding: 1em 3em 1em 3em;
+        padding: 1em 2.5em 1em 2.5em;
     
         width: 100%;
         font-size: 16px;
