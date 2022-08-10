@@ -127,7 +127,7 @@ footer {
   nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
 
