@@ -2,13 +2,14 @@
 const activePage = window.location.pathname;
 console.log(activePage);
 
-const headerLinks = document.querySelectorAll('nav ul li a').
-  forEach(link => {
-    if (link.href.includes(`${activePage}`)) {
-      link.parentElement.classList.add('headerLinkActive');
-    }
-  })
+// const headerLinks = document.querySelectorAll('nav ul li a').
+//   forEach(link => {
+//     if (link.href.includes("/")) {
+//       link.parentElement.classList.add('headerLinkaInctive');
+//     }
+//   })
 
+ var  dart = document.getElementById("dart");
 const sidebarLinks = document.querySelectorAll(".sidebar a").
   forEach(link => {
     if (link.href.includes(activePage)) {
@@ -16,6 +17,7 @@ const sidebarLinks = document.querySelectorAll(".sidebar a").
       link.classList.add('liactive');
       link.parentElement.classList.add('liactive');
       link.parentElement.classList.add('sidebarActiveHover');
+      dart.classList.add('headerLinkActive');
     }
   })
 

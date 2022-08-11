@@ -32,6 +32,9 @@ header {
 .headerLinkActive {
   border-top: 3px solid salmon;
 }
+.headerLinkInactive {
+  border-top: 3px solid black;
+}
 
 nav ul {
   list-style-type: none;
