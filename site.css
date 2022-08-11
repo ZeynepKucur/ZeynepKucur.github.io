@@ -76,14 +76,19 @@ nav ul li img {
 .flex1 {
   order: 1;
   border: none;
-  margin-left: 2em;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .flex2 {
-  flex-basis: 10%;
+  flex-basis: 8%;
   order: 2;
+  margin-right: 2%;
 }
-
+.flex3{
+  flex-basis: 5%;
+  order: 3;
+}
 /* nav ul li:hover {
   border-top: 3px solid salmon;
 } */
@@ -152,7 +157,9 @@ footer {
   .flex1 {
     order: 4;
   }
-
+  .flex2{
+    margin-right: 0;
+  }
   footer {
     background-color: deepskyblue;
     margin-top: 5em;
