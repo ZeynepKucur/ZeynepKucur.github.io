@@ -145,7 +145,7 @@ footer {
     }
 
     .flex1 {
-        order: 2;
+        order: 3;
         margin-left: 0;
     }
 
@@ -153,6 +153,9 @@ footer {
         flex-basis: 1%;
         order: 1;
         margin-right: 0;
+    }
+    .flex3{
+        order: 2;
     }
 
     footer {
