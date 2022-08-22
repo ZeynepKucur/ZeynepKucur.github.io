@@ -111,7 +111,7 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #af3636;
+  color: #000000;
   opacity: 0;
   pointer-events: none;
   transition: all .4s;
